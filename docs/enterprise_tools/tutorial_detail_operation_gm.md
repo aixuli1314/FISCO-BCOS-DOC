@@ -973,7 +973,18 @@ vi ./console/conf/applicationContext.xml
     <constructor-arg value="1"/> <!-- 0:standard 1:guomi -->
 </bean>
 ```
-
+使用`1.x`版本控制台,需要替换国密版本的编译包
+```
+cd ./console/lib
+```
+删除solcJ-all-0.4.25.jar
+```
+rm -rf solcJ-all-0.4.25.jar
+```
+下载国密版本的编译包
+```
+curl -LO https://github.com/FISCO-BCOS/LargeFiles/raw/master/tools/solcj/solcJ-all-0.4.25-gm.jar
+```
 
 ### 查看机构C节点4信息
 
